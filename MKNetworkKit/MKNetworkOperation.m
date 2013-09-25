@@ -347,6 +347,13 @@ OSStatus extractIdentityAndTrust(CFDataRef inPKCS12Data,
   }
 }
 
+-(void)setTimeoutInterval:(NSTimeInterval)timeoutInterval{
+	_request.timeoutInterval = timeoutInterval;
+}
+-(NSTimeInterval)timeoutInterval{
+	return _request.timeoutInterval;
+}
+
 - (void)encodeWithCoder:(NSCoder *)encoder
 {
   [encoder encodeInteger:(NSInteger)self.stringEncoding forKey:@"stringEncoding"];

@@ -263,6 +263,15 @@ typedef enum {
 @property (strong, nonatomic) NSMutableDictionary *cacheHeaders;
 
 /*!
+ *  @abstract Custom Timeout interval
+ *  @property timeoutInterval
+ *
+ *  @discussion
+ *	Allows the app to set custom network timeout intervals
+ */
+@property (nonatomic) NSTimeInterval timeoutInterval;
+
+/*!
  *  @abstract Authentication methods
  *  
  *  @discussion
